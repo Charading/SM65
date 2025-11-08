@@ -1,0 +1,266 @@
+[kbplacer_plugin_action.py:65]: Plugin version: 0.13
+[kbplacer_plugin_action.py:66]: Python version: '3.11.5 (main, Jun 15 2025, 06:45:45) [MSC v.1942 64 bit (AMD64)]'
+[kbplacer_plugin_action.py:67]: KiCad version: 9.0.4 with 4.2.2 msw (phoenix) wxWidgets 3.2.8
+[kbplacer_dialog.py:586]: Language: en
+[kbplacer_plugin_action.py:75]: GUI state: {"layout_path": "X:\\SM65\\testing\\hall_matrix\\hallmatrix.json", "key_distance": [19.05, 19.05], "key_info": {"annotation_format": "HE{}", "position_option": "Default", "position": {"x": 0.0, "y": 0.0, "orientation": 0.0, "side": "Front"}, "template_path": ""}, "enable_diode_placement": false, "route_switches_with_diodes": true, "optimize_diodes_orientation": false, "diode_info": {"annotation_format": "D{}", "position_option": "Default", "position": {"x": 5.08, "y": 3.03, "orientation": 90.0, "side": "Back"}, "template_path": ""}, "additional_elements": [{"annotation_format": "LED{}", "position_option": "Custom", "position": {"x": 0.0, "y": -5.08, "orientation": 0.0, "side": "Front"}, "template_path": ""}], "route_rows_and_columns": false, "template_path": "", "generate_outline": false, "outline_delta": 0.0}
+[key_placer.py:362]: Set key 1U distance: 19050000/19050000
+[key_placer.py:117]: Unexpected switch net position detected, each switch should have two unique nets unambiguously defining position in key matrix, switch-by-matrix association can't be used
+[key_placer.py:124]: Switches by nets: {}
+[key_placer.py:128]: Diodes by switch: {}
+[board_modifier.py:64]: Searching for HE1 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[key_placer.py:558]: Looking for connection template between HE1 and other elements
+[board_modifier.py:98]: Getting HE1 footprint position: (83938992, 48734336)
+[key_placer.py:602]: Got connection template: 
+[kle_serial.py:897]: User layout: [{'name': 'HallEffect_prototype_v1'}, ['1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4'], [{'y': -0.25}, '1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4'], [{'y': -0.25}, '1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4'], [{'y': -0.25}, '1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4'], [{'y': -0.25}, '1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4'], [{'y': -0.25}, '1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4'], [{'y': -0.25}, '1', {'x': -0.25}, '2', {'x': -0.25}, '3', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4', {'x': -0.25}, '4']]
+[key_placer.py:662]: Layout offset: (28575000, 28575000)
+[board_modifier.py:85]: Setting HE1 footprint position: (38100000, 38100000)
+[board_modifier.py:85]: Setting HE2 footprint position: (52387500, 38100000)
+[board_modifier.py:85]: Setting HE3 footprint position: (66675000, 38100000)
+[board_modifier.py:85]: Setting HE4 footprint position: (80962500, 38100000)
+[board_modifier.py:85]: Setting HE5 footprint position: (95250000, 38100000)
+[board_modifier.py:85]: Setting HE6 footprint position: (109537500, 38100000)
+[board_modifier.py:85]: Setting HE7 footprint position: (123825000, 38100000)
+[board_modifier.py:85]: Setting HE8 footprint position: (38100000, 52387500)
+[board_modifier.py:85]: Setting HE9 footprint position: (52387500, 52387500)
+[board_modifier.py:85]: Setting HE10 footprint position: (66675000, 52387500)
+[board_modifier.py:85]: Setting HE11 footprint position: (80962500, 52387500)
+[board_modifier.py:85]: Setting HE12 footprint position: (95250000, 52387500)
+[board_modifier.py:85]: Setting HE13 footprint position: (109537500, 52387500)
+[board_modifier.py:85]: Setting HE14 footprint position: (123825000, 52387500)
+[board_modifier.py:85]: Setting HE15 footprint position: (38100000, 66675000)
+[board_modifier.py:85]: Setting HE16 footprint position: (52387500, 66675000)
+[board_modifier.py:85]: Setting HE17 footprint position: (66675000, 66675000)
+[board_modifier.py:85]: Setting HE18 footprint position: (80962500, 66675000)
+[board_modifier.py:85]: Setting HE19 footprint position: (95250000, 66675000)
+[board_modifier.py:85]: Setting HE20 footprint position: (109537500, 66675000)
+[board_modifier.py:85]: Setting HE21 footprint position: (123825000, 66675000)
+[board_modifier.py:85]: Setting HE22 footprint position: (38100000, 80962500)
+[board_modifier.py:85]: Setting HE23 footprint position: (52387500, 80962500)
+[board_modifier.py:85]: Setting HE24 footprint position: (66675000, 80962500)
+[board_modifier.py:85]: Setting HE25 footprint position: (80962500, 80962500)
+[board_modifier.py:85]: Setting HE26 footprint position: (95250000, 80962500)
+[board_modifier.py:85]: Setting HE27 footprint position: (109537500, 80962500)
+[board_modifier.py:85]: Setting HE28 footprint position: (123825000, 80962500)
+[board_modifier.py:85]: Setting HE29 footprint position: (38100000, 95250000)
+[board_modifier.py:85]: Setting HE30 footprint position: (52387500, 95250000)
+[board_modifier.py:85]: Setting HE31 footprint position: (66675000, 95250000)
+[board_modifier.py:85]: Setting HE32 footprint position: (80962500, 95250000)
+[board_modifier.py:85]: Setting HE33 footprint position: (95250000, 95250000)
+[board_modifier.py:85]: Setting HE34 footprint position: (109537500, 95250000)
+[board_modifier.py:85]: Setting HE35 footprint position: (123825000, 95250000)
+[board_modifier.py:85]: Setting HE36 footprint position: (38100000, 109537500)
+[board_modifier.py:85]: Setting HE37 footprint position: (52387500, 109537500)
+[board_modifier.py:85]: Setting HE38 footprint position: (66675000, 109537500)
+[board_modifier.py:85]: Setting HE39 footprint position: (80962500, 109537500)
+[board_modifier.py:85]: Setting HE40 footprint position: (95250000, 109537500)
+[board_modifier.py:85]: Setting HE41 footprint position: (109537500, 109537500)
+[board_modifier.py:85]: Setting HE42 footprint position: (123825000, 109537500)
+[board_modifier.py:85]: Setting HE43 footprint position: (38100000, 123825000)
+[board_modifier.py:85]: Setting HE44 footprint position: (52387500, 123825000)
+[board_modifier.py:85]: Setting HE45 footprint position: (66675000, 123825000)
+[board_modifier.py:85]: Setting HE46 footprint position: (80962500, 123825000)
+[board_modifier.py:85]: Setting HE47 footprint position: (95250000, 123825000)
+[board_modifier.py:85]: Setting HE48 footprint position: (109537500, 123825000)
+[board_modifier.py:85]: Setting HE49 footprint position: (123825000, 123825000)
+[key_placer.py:999]: Diode info: [ElementInfo(annotation_format='D{}', position_option=<PositionOption.UNCHANGED: 'Unchanged'>, position=ElementPosition(x=5.08, y=3.03, orientation=90.0, side=<Side.BACK: 'Back'>), template_path='')]
+[key_placer.py:775]: Placing additional elements for HE49
+[board_modifier.py:98]: Getting HE49 footprint position: (123825000, 123825000)
+[board_modifier.py:75]: Searching for optional LED49 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED49 footprint position: (123825000, 118745000)
+[key_placer.py:775]: Placing additional elements for HE48
+[board_modifier.py:98]: Getting HE48 footprint position: (109537500, 123825000)
+[board_modifier.py:75]: Searching for optional LED48 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED48 footprint position: (109537500, 118745000)
+[key_placer.py:775]: Placing additional elements for HE47
+[board_modifier.py:98]: Getting HE47 footprint position: (95250000, 123825000)
+[board_modifier.py:75]: Searching for optional LED47 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED47 footprint position: (95250000, 118745000)
+[key_placer.py:775]: Placing additional elements for HE46
+[board_modifier.py:98]: Getting HE46 footprint position: (80962500, 123825000)
+[board_modifier.py:75]: Searching for optional LED46 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED46 footprint position: (80962500, 118745000)
+[key_placer.py:775]: Placing additional elements for HE45
+[board_modifier.py:98]: Getting HE45 footprint position: (66675000, 123825000)
+[board_modifier.py:75]: Searching for optional LED45 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED45 footprint position: (66675000, 118745000)
+[key_placer.py:775]: Placing additional elements for HE44
+[board_modifier.py:98]: Getting HE44 footprint position: (52387500, 123825000)
+[board_modifier.py:75]: Searching for optional LED44 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED44 footprint position: (52387500, 118745000)
+[key_placer.py:775]: Placing additional elements for HE43
+[board_modifier.py:98]: Getting HE43 footprint position: (38100000, 123825000)
+[board_modifier.py:75]: Searching for optional LED43 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED43 footprint position: (38100000, 118745000)
+[key_placer.py:775]: Placing additional elements for HE42
+[board_modifier.py:98]: Getting HE42 footprint position: (123825000, 109537500)
+[board_modifier.py:75]: Searching for optional LED42 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED42 footprint position: (123825000, 104457500)
+[key_placer.py:775]: Placing additional elements for HE41
+[board_modifier.py:98]: Getting HE41 footprint position: (109537500, 109537500)
+[board_modifier.py:75]: Searching for optional LED41 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED41 footprint position: (109537500, 104457500)
+[key_placer.py:775]: Placing additional elements for HE40
+[board_modifier.py:98]: Getting HE40 footprint position: (95250000, 109537500)
+[board_modifier.py:75]: Searching for optional LED40 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED40 footprint position: (95250000, 104457500)
+[key_placer.py:775]: Placing additional elements for HE39
+[board_modifier.py:98]: Getting HE39 footprint position: (80962500, 109537500)
+[board_modifier.py:75]: Searching for optional LED39 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED39 footprint position: (80962500, 104457500)
+[key_placer.py:775]: Placing additional elements for HE38
+[board_modifier.py:98]: Getting HE38 footprint position: (66675000, 109537500)
+[board_modifier.py:75]: Searching for optional LED38 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED38 footprint position: (66675000, 104457500)
+[key_placer.py:775]: Placing additional elements for HE37
+[board_modifier.py:98]: Getting HE37 footprint position: (52387500, 109537500)
+[board_modifier.py:75]: Searching for optional LED37 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED37 footprint position: (52387500, 104457500)
+[key_placer.py:775]: Placing additional elements for HE7
+[board_modifier.py:98]: Getting HE7 footprint position: (123825000, 38100000)
+[board_modifier.py:75]: Searching for optional LED7 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED7 footprint position: (123825000, 33020000)
+[key_placer.py:775]: Placing additional elements for HE5
+[board_modifier.py:98]: Getting HE5 footprint position: (95250000, 38100000)
+[board_modifier.py:75]: Searching for optional LED5 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED5 footprint position: (95250000, 33020000)
+[key_placer.py:775]: Placing additional elements for HE6
+[board_modifier.py:98]: Getting HE6 footprint position: (109537500, 38100000)
+[board_modifier.py:75]: Searching for optional LED6 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED6 footprint position: (109537500, 33020000)
+[key_placer.py:775]: Placing additional elements for HE0
+[board_modifier.py:98]: Getting HE0 footprint position: (69651504, 48734336)
+[board_modifier.py:75]: Searching for optional LED0 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED0 footprint position: (69651504, 43654336)
+[key_placer.py:775]: Placing additional elements for HE1
+[board_modifier.py:98]: Getting HE1 footprint position: (38100000, 38100000)
+[board_modifier.py:75]: Searching for optional LED1 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED1 footprint position: (38100000, 33020000)
+[key_placer.py:775]: Placing additional elements for HE2
+[board_modifier.py:98]: Getting HE2 footprint position: (52387500, 38100000)
+[board_modifier.py:75]: Searching for optional LED2 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED2 footprint position: (52387500, 33020000)
+[key_placer.py:775]: Placing additional elements for HE3
+[board_modifier.py:98]: Getting HE3 footprint position: (66675000, 38100000)
+[board_modifier.py:75]: Searching for optional LED3 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED3 footprint position: (66675000, 33020000)
+[key_placer.py:775]: Placing additional elements for HE4
+[board_modifier.py:98]: Getting HE4 footprint position: (80962500, 38100000)
+[board_modifier.py:75]: Searching for optional LED4 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED4 footprint position: (80962500, 33020000)
+[key_placer.py:775]: Placing additional elements for HE36
+[board_modifier.py:98]: Getting HE36 footprint position: (38100000, 109537500)
+[board_modifier.py:75]: Searching for optional LED36 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED36 footprint position: (38100000, 104457500)
+[key_placer.py:775]: Placing additional elements for HE35
+[board_modifier.py:98]: Getting HE35 footprint position: (123825000, 95250000)
+[board_modifier.py:75]: Searching for optional LED35 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED35 footprint position: (123825000, 90170000)
+[key_placer.py:775]: Placing additional elements for HE34
+[board_modifier.py:98]: Getting HE34 footprint position: (109537500, 95250000)
+[board_modifier.py:75]: Searching for optional LED34 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED34 footprint position: (109537500, 90170000)
+[key_placer.py:775]: Placing additional elements for HE33
+[board_modifier.py:98]: Getting HE33 footprint position: (95250000, 95250000)
+[board_modifier.py:75]: Searching for optional LED33 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED33 footprint position: (95250000, 90170000)
+[key_placer.py:775]: Placing additional elements for HE32
+[board_modifier.py:98]: Getting HE32 footprint position: (80962500, 95250000)
+[board_modifier.py:75]: Searching for optional LED32 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED32 footprint position: (80962500, 90170000)
+[key_placer.py:775]: Placing additional elements for HE31
+[board_modifier.py:98]: Getting HE31 footprint position: (66675000, 95250000)
+[board_modifier.py:75]: Searching for optional LED31 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED31 footprint position: (66675000, 90170000)
+[key_placer.py:775]: Placing additional elements for HE30
+[board_modifier.py:98]: Getting HE30 footprint position: (52387500, 95250000)
+[board_modifier.py:75]: Searching for optional LED30 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED30 footprint position: (52387500, 90170000)
+[key_placer.py:775]: Placing additional elements for HE29
+[board_modifier.py:98]: Getting HE29 footprint position: (38100000, 95250000)
+[board_modifier.py:75]: Searching for optional LED29 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED29 footprint position: (38100000, 90170000)
+[key_placer.py:775]: Placing additional elements for HE28
+[board_modifier.py:98]: Getting HE28 footprint position: (123825000, 80962500)
+[board_modifier.py:75]: Searching for optional LED28 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED28 footprint position: (123825000, 75882500)
+[key_placer.py:775]: Placing additional elements for HE27
+[board_modifier.py:98]: Getting HE27 footprint position: (109537500, 80962500)
+[board_modifier.py:75]: Searching for optional LED27 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED27 footprint position: (109537500, 75882500)
+[key_placer.py:775]: Placing additional elements for HE26
+[board_modifier.py:98]: Getting HE26 footprint position: (95250000, 80962500)
+[board_modifier.py:75]: Searching for optional LED26 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED26 footprint position: (95250000, 75882500)
+[key_placer.py:775]: Placing additional elements for HE25
+[board_modifier.py:98]: Getting HE25 footprint position: (80962500, 80962500)
+[board_modifier.py:75]: Searching for optional LED25 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED25 footprint position: (80962500, 75882500)
+[key_placer.py:775]: Placing additional elements for HE24
+[board_modifier.py:98]: Getting HE24 footprint position: (66675000, 80962500)
+[board_modifier.py:75]: Searching for optional LED24 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED24 footprint position: (66675000, 75882500)
+[key_placer.py:775]: Placing additional elements for HE23
+[board_modifier.py:98]: Getting HE23 footprint position: (52387500, 80962500)
+[board_modifier.py:75]: Searching for optional LED23 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED23 footprint position: (52387500, 75882500)
+[key_placer.py:775]: Placing additional elements for HE22
+[board_modifier.py:98]: Getting HE22 footprint position: (38100000, 80962500)
+[board_modifier.py:75]: Searching for optional LED22 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED22 footprint position: (38100000, 75882500)
+[key_placer.py:775]: Placing additional elements for HE21
+[board_modifier.py:98]: Getting HE21 footprint position: (123825000, 66675000)
+[board_modifier.py:75]: Searching for optional LED21 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED21 footprint position: (123825000, 61595000)
+[key_placer.py:775]: Placing additional elements for HE20
+[board_modifier.py:98]: Getting HE20 footprint position: (109537500, 66675000)
+[board_modifier.py:75]: Searching for optional LED20 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED20 footprint position: (109537500, 61595000)
+[key_placer.py:775]: Placing additional elements for HE19
+[board_modifier.py:98]: Getting HE19 footprint position: (95250000, 66675000)
+[board_modifier.py:75]: Searching for optional LED19 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED19 footprint position: (95250000, 61595000)
+[key_placer.py:775]: Placing additional elements for HE18
+[board_modifier.py:98]: Getting HE18 footprint position: (80962500, 66675000)
+[board_modifier.py:75]: Searching for optional LED18 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED18 footprint position: (80962500, 61595000)
+[key_placer.py:775]: Placing additional elements for HE17
+[board_modifier.py:98]: Getting HE17 footprint position: (66675000, 66675000)
+[board_modifier.py:75]: Searching for optional LED17 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED17 footprint position: (66675000, 61595000)
+[key_placer.py:775]: Placing additional elements for HE16
+[board_modifier.py:98]: Getting HE16 footprint position: (52387500, 66675000)
+[board_modifier.py:75]: Searching for optional LED16 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED16 footprint position: (52387500, 61595000)
+[key_placer.py:775]: Placing additional elements for HE15
+[board_modifier.py:98]: Getting HE15 footprint position: (38100000, 66675000)
+[board_modifier.py:75]: Searching for optional LED15 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED15 footprint position: (38100000, 61595000)
+[key_placer.py:775]: Placing additional elements for HE14
+[board_modifier.py:98]: Getting HE14 footprint position: (123825000, 52387500)
+[board_modifier.py:75]: Searching for optional LED14 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED14 footprint position: (123825000, 47307500)
+[key_placer.py:775]: Placing additional elements for HE13
+[board_modifier.py:98]: Getting HE13 footprint position: (109537500, 52387500)
+[board_modifier.py:75]: Searching for optional LED13 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED13 footprint position: (109537500, 47307500)
+[key_placer.py:775]: Placing additional elements for HE12
+[board_modifier.py:98]: Getting HE12 footprint position: (95250000, 52387500)
+[board_modifier.py:75]: Searching for optional LED12 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED12 footprint position: (95250000, 47307500)
+[key_placer.py:775]: Placing additional elements for HE11
+[board_modifier.py:98]: Getting HE11 footprint position: (80962500, 52387500)
+[board_modifier.py:75]: Searching for optional LED11 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED11 footprint position: (80962500, 47307500)
+[key_placer.py:775]: Placing additional elements for HE10
+[board_modifier.py:98]: Getting HE10 footprint position: (66675000, 52387500)
+[board_modifier.py:75]: Searching for optional LED10 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED10 footprint position: (66675000, 47307500)
+[key_placer.py:775]: Placing additional elements for HE9
+[board_modifier.py:98]: Getting HE9 footprint position: (52387500, 52387500)
+[board_modifier.py:75]: Searching for optional LED9 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED9 footprint position: (52387500, 47307500)
+[key_placer.py:775]: Placing additional elements for HE8
+[board_modifier.py:98]: Getting HE8 footprint position: (38100000, 52387500)
+[board_modifier.py:75]: Searching for optional LED8 footprint in X:\SM65\testing\hall_matrix\hall_matrix.kicad_pcb
+[board_modifier.py:85]: Setting LED8 footprint position: (38100000, 47307500)
+[key_placer.py:458]: Removing dangling tracks

@@ -1,0 +1,26 @@
+{
+    "name": "SM65 Test",
+    "vendorId": "0x00A1",
+    "productId": "0x00A1",
+    "matrix": {
+        "rows": 1,
+        "cols": 1
+    },
+    "layouts": {
+        "keymap": [
+            [
+                {
+                    "x": 0,
+                    "y": 0
+                },
+                "0,0"
+            ]
+        ]
+    },
+    "keycodes": [
+        "qmk_lighting"
+    ],
+    "menus": [
+        "qmk_rgb_matrix"
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "manufacturer": "Charading",
+    "keyboard_name": "sm65_test",
+    "maintainer": "Charading",
+    "bootloader": "rp2040",
+    "diode_direction": "COL2ROW",
+    "features": {
+        "bootmagic": true,
+        "command": false,
+        "console": false,
+        "extrakey": true,
+        "mousekey": true,
+        "nkro": true,
+        "rgb_matrix": true,
+        "via": true
+    },
+    "matrix_pins": {
+        "cols": ["GP11"],
+        "rows": ["GP12"]
+    },
+    "rgb_matrix": {
+        "driver": "ws2812",
+        "led_count": 1,
+        "layout": [
+            {"matrix": [0, 0], "x": 0, "y": 0, "flags": 4}
+        ]
+    },
+    "ws2812": {
+        "pin": "GP16",
+        "driver": "vendor"
+    },
+    "processor": "RP2040",
+    "url": "",
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x00A1",
+        "vid": "0x00A1"
+    },
+    "layouts": {
+        "LAYOUT_ortho_1x1": {
+            "layout": [
+                {"matrix": [0, 0], "x": 0, "y": 0}
+            ]
+        }
+    },
+    "modules": [
+        "signalrgb"
+    ]
+}
