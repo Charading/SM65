@@ -95,31 +95,87 @@ float adc_to_voltage(uint16_t adc_value) {
     return (float)adc_value * ADC_VREF / ADC_RESOLUTION;
 }
 
-// Print all ADC values as one big block (one line per mux, raw values only)
+// Forward declaration
+void send_vendor_hid_payload(const uint8_t *payload, uint16_t len);
+
+// Print all ADC values as a single CSV line: timestamp_ms, ch0_mV, ch1_mV, ...
+// Values below ADC_ACTIVE_THRESHOLD (raw) are reported as 0 to ignore floating channels.
+#ifndef ADC_ACTIVE_THRESHOLD
+#define ADC_ACTIVE_THRESHOLD 200
+#endif
+
 void print_all_adc_values() {
-    printf("\n=== ADC BLOCK START ===\n");
+    // Output clean ADC data with markers for easy parsing
+    printf("===ADC_START===\n");
 
     for (int mux = 0; mux < NUM_MUXES; mux++) {
-        // print raw ADC values for this mux, separated by spaces
         for (int channel = 0; channel < CHANNELS_PER_MUX; channel++) {
             uint16_t adc_raw = read_mux_adc(mux, channel);
-            // Print zero-padded 4-digit raw value
-            if (channel == 0) {
-                printf("%04d", adc_raw);
-            } else {
-                printf(" %04d", adc_raw);
+            uint32_t mv = 0;
+            if (adc_raw >= ADC_ACTIVE_THRESHOLD) {
+                // convert to millivolts (rounded)
+                float v = adc_to_voltage(adc_raw);
+                mv = (uint32_t)(v * 1000.0f + 0.5f);
             }
+            int ch_num = mux * CHANNELS_PER_MUX + channel;
+            printf("CH %d:%lu\n", ch_num, (unsigned long)mv);
         }
-        // newline between mux rows
-        printf("\n");
     }
 
-    printf("=== ADC BLOCK END ===\n\n");
+    printf("===ADC_END===\n");
+
+    // Also send binary vendor HID payload (80 uint16 little-endian values = 160 bytes)
+    uint8_t payload[TOTAL_CHANNELS * 2];
+    int idx = 0;
+    for (int mux = 0; mux < NUM_MUXES; mux++) {
+        for (int channel = 0; channel < CHANNELS_PER_MUX; channel++) {
+            uint16_t adc_raw = read_mux_adc(mux, channel);
+            uint16_t mv = 0;
+            if (adc_raw >= ADC_ACTIVE_THRESHOLD) {
+                float v = adc_to_voltage(adc_raw);
+                mv = (uint16_t)(v * 1000.0f + 0.5f);
+            }
+            payload[idx++] = mv & 0xFF;
+            payload[idx++] = (mv >> 8) & 0xFF;
+        }
+    }
+
+    // send vendor HID payload
+    static uint32_t hid_send_count = 0;
+    send_vendor_hid_payload(payload, sizeof(payload));
+    hid_send_count++;
+    if (hid_send_count == 1 || hid_send_count % 50 == 0) {
+        printf("🔵 Called send_vendor_hid_payload %lu times\n", hid_send_count);
+        fflush(stdout);
+    }
 }
 
 // HID report descriptor for keyboard
+// HID report descriptor: keyboard
 static const uint8_t desc_hid_report[] = {
     TUD_HID_REPORT_DESC_KEYBOARD()
+};
+
+// Vendor HID report descriptor (generic IN reports of 64 bytes)
+// Usage Page (Vendor 0xFF00), Usage 0x01, Collection Application,
+//   Report ID 2, Report Size 8, Report Count 64, Input (Data,Var,Abs)
+//   Report ID 2, Report Size 8, Report Count 64, Output (Data,Var,Abs)
+// End Collection
+static const uint8_t desc_hid_report_vendor[] = {
+    0x06, 0x00, 0xFF,      // USAGE_PAGE (Vendor Defined 0xFF00)
+    0x09, 0x01,            // USAGE (0x01)
+    0xA1, 0x01,            // COLLECTION (Application)
+    0x85, 0x02,            //   REPORT_ID (2)
+    0x75, 0x08,            //   REPORT_SIZE (8)
+    0x95, 0x40,            //   REPORT_COUNT (64)
+    0x09, 0x00,            //   USAGE (Undefined)
+    0x15, 0x00,            //   LOGICAL_MINIMUM (0)
+    0x26, 0xFF, 0x00,      //   LOGICAL_MAXIMUM (255)
+    0x81, 0x02,            //   INPUT (Data,Var,Abs)
+    0x95, 0x40,            //   REPORT_COUNT (64)
+    0x09, 0x00,            //   USAGE (Undefined)
+    0x91, 0x02,            //   OUTPUT (Data,Var,Abs)
+    0xC0                   // END_COLLECTION
 };
 
 // USB Device Descriptor
@@ -144,11 +200,12 @@ static const tusb_desc_device_t desc_device = {
 enum {
     ITF_NUM_CDC = 0,
     ITF_NUM_CDC_DATA,
-    ITF_NUM_HID,
+    ITF_NUM_HID_KEYBOARD,
+    ITF_NUM_HID_VENDOR,
     ITF_NUM_TOTAL
 };
 
-#define CONFIG_TOTAL_LEN  (TUD_CONFIG_DESC_LEN + TUD_CDC_DESC_LEN + TUD_HID_DESC_LEN)
+#define CONFIG_TOTAL_LEN  (TUD_CONFIG_DESC_LEN + TUD_CDC_DESC_LEN + TUD_HID_DESC_LEN + TUD_HID_DESC_LEN)
 
 static const uint8_t desc_configuration[] = {
     // Config number, interface count, string index, total length, attribute, power in mA
@@ -159,7 +216,10 @@ static const uint8_t desc_configuration[] = {
     TUD_CDC_DESCRIPTOR(ITF_NUM_CDC, 4, 0x82, 8, 0x01, 0x81, CFG_TUD_CDC_EP_BUFSIZE),
 
     // HID Keyboard Interface
-    TUD_HID_DESCRIPTOR(ITF_NUM_HID, 0, HID_ITF_PROTOCOL_KEYBOARD, sizeof(desc_hid_report), 0x83, CFG_TUD_HID_EP_BUFSIZE, 10)
+    TUD_HID_DESCRIPTOR(ITF_NUM_HID_KEYBOARD, 0, HID_ITF_PROTOCOL_KEYBOARD, sizeof(desc_hid_report), 0x83, CFG_TUD_HID_EP_BUFSIZE, 10),
+
+    // HID Vendor Interface (report descriptor defined above)
+    TUD_HID_DESCRIPTOR(ITF_NUM_HID_VENDOR, 0, HID_ITF_PROTOCOL_NONE, sizeof(desc_hid_report_vendor), 0x84, CFG_TUD_HID_EP_BUFSIZE, 10)
 };
 
 // String Descriptors
@@ -210,8 +270,12 @@ uint16_t const* tud_descriptor_string_cb(uint8_t index, uint16_t langid) {
 
 // HID Report Descriptor
 uint8_t const * tud_hid_descriptor_report_cb(uint8_t instance) {
-    (void) instance;
-    return desc_hid_report;
+    // instance 0 = keyboard, instance 1 = vendor
+    if (instance == 0) {
+        return desc_hid_report;
+    } else {
+        return desc_hid_report_vendor;
+    }
 }
 
 // HID callbacks
@@ -251,6 +315,51 @@ bool send_hid_report(uint8_t modifier, uint8_t keycode) {
     }
     
     return false; // HID not ready
+}
+
+// Send vendor HID payload (80 channels * 2 bytes = 160 bytes) as multiple 64-byte reports
+// Report ID used in descriptor: 2
+void send_vendor_hid_payload(const uint8_t *payload, uint16_t len) {
+    // Use instance 1 for vendor HID (keyboard is instance 0)
+    const uint8_t hid_instance = 1;
+    
+    static bool first_send = true;
+    static uint32_t send_count = 0;
+    static uint32_t fail_count = 0;
+    
+    // Don't check ready - just send and see what happens
+    if (first_send) {
+        printf("🚀 Attempting vendor HID send (instance=%d, mounted=%d)\n", hid_instance, tud_mounted());
+        fflush(stdout);
+        first_send = false;
+    }
+
+    // For now, send just the FIRST chunk to test
+    // Chunk size: payload per HID report
+    const uint8_t chunk_size = 64;
+    uint8_t buf[65];  // report ID + 64 bytes data
+    
+    // First byte is report ID
+    buf[0] = 2;  // Report ID
+    memset(buf + 1, 0, chunk_size);
+    memcpy(buf + 1, payload, chunk_size < len ? chunk_size : len);
+
+    // Send report using tud_hid_n_report for specific HID instance
+    bool success = tud_hid_n_report(hid_instance, buf[0], buf + 1, chunk_size);
+    
+    if (success) {
+        send_count++;
+        if (send_count % 50 == 1) {
+            printf("✅ Sent %lu HID reports successfully!\n", send_count);
+            fflush(stdout);
+        }
+    } else {
+        fail_count++;
+        if (fail_count % 100 == 1) {
+            printf("❌ HID send failed (count=%lu)\n", fail_count);
+            fflush(stdout);
+        }
+    }
 }
 
 // Main function
@@ -325,6 +434,19 @@ int main() {
             adc_scan_ms = current_ms;
             print_all_adc_values();
         }
+
+        // Check for incoming CDC commands from host (e.g., 's' to request a scan)
+        if (tud_cdc_connected() && tud_cdc_available()) {
+            uint8_t buf[64];
+            uint32_t count = tud_cdc_read(buf, sizeof(buf));
+            for (uint32_t i = 0; i < count; i++) {
+                uint8_t b = buf[i];
+                if (b == 's' || b == 'S') {
+                    // immediate ADC scan on request
+                    print_all_adc_values();
+                }
+            }
+        }
         
         // Check if device is mounted (enumerated)
         static bool enumerated_message_sent = false;
@@ -355,6 +477,8 @@ int main() {
                     
                     // Schedule key release for next loop iteration
                     sleep_ms(50);
+                    // Also send an immediate ADC CSV block so host GUI can update
+                    print_all_adc_values();
                 } else {
                     printf("Failed to send key press\n");
                 }
