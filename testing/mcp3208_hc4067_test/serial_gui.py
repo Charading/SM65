@@ -4,7 +4,7 @@ Simple serial GUI for viewing MCP3208+HC4067 scans.
 - Reads blocks from a USB serial device (USB CDC) where the Pico prints one block
   terminated by a line of dashes ("-----------").
 - Parses lines like: "MUX 1 | CH1: 4096 | CH3: 3972 |"
-- Displays a 5x8 grid (5 mux rows, 8 columns) as bar graphs scaled 0..4095.
+- Displays a 5x16 grid (5 mux rows, 16 columns) as bar graphs scaled 0..4095.
 
 Assumptions:
 - There are 5 muxes (rows). Each mux's relevant channels are CH1..CH8 mapped to columns 0..7.
@@ -34,9 +34,12 @@ import serial.tools.list_ports
 
 # GUI / parsing configuration
 ROWS = 5
-COLS = 8
+COLS = 16
 MAX_ADC = 4095.0
 BLOCK_SEPARATOR = "-" * 3  # we detect lines starting with dashes
+
+# Only show bars for readings at or above this threshold (user requested >200)
+DISPLAY_THRESHOLD = 200
 
 # Regular expression to parse MUX lines and channel:value pairs
 RE_MUX = re.compile(r"^\s*MUX\s*(\d+)", re.IGNORECASE)
@@ -160,7 +163,8 @@ class MuxGridApp:
             return
         cols = COLS
         rows = ROWS
-        cw = max(60, (w - (cols+1)*self.cell_margin) // cols)
+        # with 16 columns make cells narrower by default
+        cw = max(36, (w - (cols+1)*self.cell_margin) // cols)
         ch = max(48, (h - (rows+1)*self.cell_margin) // rows)
         self.cell_w = cw
         self.cell_h = ch
@@ -258,7 +262,8 @@ class MuxGridApp:
             for chm in RE_CHVAL.finditer(line):
                 ch_idx = int(chm.group(1))  # 1-based channel index reported by Pico
                 val = int(chm.group(2))
-                # map channels 1..8 to columns 0..7; ignore others
+                # Map channels directly to 1..COLS columns (CH1 -> col0, CH16 -> col15).
+                # Ignore channels outside 1..COLS.
                 if 1 <= ch_idx <= COLS:
                     col_idx = ch_idx - 1
                     new_vals[row_idx][col_idx] = val
@@ -276,36 +281,35 @@ class MuxGridApp:
                 inner_x1 = x1 + 6
                 inner_x2 = x2 - 6
                 inner_h = (y2 - y1) - 12
-                # compute bar top based on value
-                try:
-                    frac = max(0.0, min(1.0, float(val) / MAX_ADC))
-                except Exception:
-                    frac = 0.0
-                bar_top = y2 - 6 - int(frac * inner_h)
-                # update bar coords
-                self.canvas.coords(bar, inner_x1, bar_top, inner_x2, y2 - 6)
-                # set color (green->yellow->red)
-                if frac > 0.66:
-                    color = '#ff4444'
-                elif frac > 0.33:
-                    color = '#ffcc33'
+                # Only show bars and numeric values above the DISPLAY_THRESHOLD
+                if val >= DISPLAY_THRESHOLD:
+                    try:
+                        frac = max(0.0, min(1.0, float(val) / MAX_ADC))
+                    except Exception:
+                        frac = 0.0
+                    bar_top = y2 - 6 - int(frac * inner_h)
+                    # update bar coords and color
+                    self.canvas.coords(bar, inner_x1, bar_top, inner_x2, y2 - 6)
+                    if frac > 0.66:
+                        color = '#ff4444'
+                    elif frac > 0.33:
+                        color = '#ffcc33'
+                    else:
+                        color = '#44ff88'
+                    self.canvas.itemconfig(bar, fill=color)
+                    # update value text
+                    self.canvas.itemconfig(val_id, text=str(val), fill='#ffffff')
                 else:
-                    color = '#44ff88'
-                self.canvas.itemconfig(bar, fill=color)
-                # update value text (keep CH label unchanged)
-                self.canvas.itemconfig(val_id, text=str(val))
-                # choose text color for value for contrast
-                if frac > 0.5:
-                    val_color = '#ffffff'
-                else:
-                    val_color = '#ffffff'
-                self.canvas.itemconfig(val_id, fill=val_color)
+                    # hide bar (collapse to a thin line) and clear numeric text
+                    self.canvas.coords(bar, inner_x1, y2 - 8, inner_x2, y2 - 6)
+                    self.canvas.itemconfig(bar, fill='#223322')
+                    self.canvas.itemconfig(val_id, text='')
 
 
 def main():
     root = tk.Tk()
     app = MuxGridApp(root)
-    root.geometry('900x500')
+    root.geometry('1200x700')
     root.mainloop()
 
 
