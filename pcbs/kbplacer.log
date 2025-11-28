@@ -1,0 +1,492 @@
+[kbplacer_plugin_action.py:65]: Plugin version: 0.13
+[kbplacer_plugin_action.py:66]: Python version: '3.11.5 (main, Jun 15 2025, 06:45:45) [MSC v.1942 64 bit (AMD64)]'
+[kbplacer_plugin_action.py:67]: KiCad version: 9.0.4 with 4.2.2 msw (phoenix) wxWidgets 3.2.8
+[kbplacer_dialog.py:586]: Language: en
+[kbplacer_plugin_action.py:75]: GUI state: {"layout_path": "X:\\SM65\\seung65_split.json", "key_distance": [19.05, 19.05], "key_info": {"annotation_format": "HE{}", "position_option": "Default", "position": {"x": 0.0, "y": 0.0, "orientation": 0.0, "side": "Back"}, "template_path": ""}, "enable_diode_placement": false, "route_switches_with_diodes": false, "optimize_diodes_orientation": false, "diode_info": {"annotation_format": "D{}", "position_option": "Default", "position": {"x": 5.08, "y": 3.03, "orientation": 90.0, "side": "Back"}, "template_path": ""}, "additional_elements": [{"annotation_format": "LED{}", "position_option": "Custom", "position": {"x": 0.0, "y": -5.08, "orientation": 0.0, "side": "Back"}, "template_path": ""}, {"annotation_format": "LC{}", "position_option": "Custom", "position": {"x": 5.0, "y": -4.33, "orientation": 0.0, "side": "Back"}, "template_path": ""}], "route_rows_and_columns": false, "template_path": "", "generate_outline": false, "outline_delta": 0.0}
+[key_placer.py:362]: Set key 1U distance: 19050000/19050000
+[key_placer.py:117]: Unexpected switch net position detected, each switch should have two unique nets unambiguously defining position in key matrix, switch-by-matrix association can't be used
+[key_placer.py:124]: Switches by nets: {}
+[key_placer.py:128]: Diodes by switch: {}
+[board_modifier.py:64]: Searching for HE1 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[key_placer.py:558]: Looking for connection template between HE1 and other elements
+[board_modifier.py:98]: Getting HE1 footprint position: (47625000, 47625000)
+[key_placer.py:602]: Got connection template: 
+[kle_serial.py:897]: User layout: [{'backcolor': '#005616', 'name': 'Seung65_Split', 'author': 'Mars'}, ['Esc', '!\n1', '@\n2', '#\n3', '$\n4', '%\n5', '^\n6', '&\n7', '*\n8', '(\n9', ')\n0', '_\n-', '+\n=', {'w': 2}, 'Backspace'], [{'w': 1.5}, 'Tab', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{\n[', '}\n]', {'w': 1.5}, '|\n\\', 'Delete'], [{'w': 1.75}, 'Caps Lock', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':\n;', '"\n\'', {'w': 2.25}, 'Enter', 'PgUp'], [{'w': 2.25}, 'Shift', 'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<\n,', '>\n.', '?\n/', {'w': 1.75}, 'Shift', 'Up', 'PgDn'], [{'w': 1.25}, 'Ctrl', {'w': 1.25}, 'Win', {'w': 1.25}, 'LAlt', {'w': 2.25}, 'Space', {'w': 1.25}, 'Space2', {'w': 2.75}, 'Space3', {'w': 1.25}, 'RAlt', {'w': 1.25}, 'Fn', {'x': 0.5}, 'Left', 'Down', 'Right']]
+[key_placer.py:662]: Layout offset: (28575000, 28575000)
+[board_modifier.py:85]: Setting HE1 footprint position: (38100000, 38100000)
+[board_modifier.py:85]: Setting HE2 footprint position: (57150000, 38100000)
+[board_modifier.py:85]: Setting HE3 footprint position: (76200000, 38100000)
+[board_modifier.py:85]: Setting HE4 footprint position: (95250000, 38100000)
+[board_modifier.py:85]: Setting HE5 footprint position: (114300000, 38100000)
+[board_modifier.py:85]: Setting HE6 footprint position: (133350000, 38100000)
+[board_modifier.py:85]: Setting HE7 footprint position: (152400000, 38100000)
+[board_modifier.py:85]: Setting HE8 footprint position: (171450000, 38100000)
+[board_modifier.py:85]: Setting HE9 footprint position: (190500000, 38100000)
+[board_modifier.py:85]: Setting HE10 footprint position: (209550000, 38100000)
+[board_modifier.py:85]: Setting HE11 footprint position: (228600000, 38100000)
+[board_modifier.py:85]: Setting HE12 footprint position: (247650000, 38100000)
+[board_modifier.py:85]: Setting HE13 footprint position: (266700000, 38100000)
+[board_modifier.py:85]: Setting HE14 footprint position: (295275000, 38100000)
+[board_modifier.py:85]: Setting HE15 footprint position: (42862500, 57150000)
+[board_modifier.py:85]: Setting HE16 footprint position: (66675000, 57150000)
+[board_modifier.py:85]: Setting HE17 footprint position: (85725000, 57150000)
+[board_modifier.py:85]: Setting HE18 footprint position: (104775000, 57150000)
+[board_modifier.py:85]: Setting HE19 footprint position: (123825000, 57150000)
+[board_modifier.py:85]: Setting HE20 footprint position: (142875000, 57150000)
+[board_modifier.py:85]: Setting HE21 footprint position: (161925000, 57150000)
+[board_modifier.py:85]: Setting HE22 footprint position: (180975000, 57150000)
+[board_modifier.py:85]: Setting HE23 footprint position: (200025000, 57150000)
+[board_modifier.py:85]: Setting HE24 footprint position: (219075000, 57150000)
+[board_modifier.py:85]: Setting HE25 footprint position: (238125000, 57150000)
+[board_modifier.py:85]: Setting HE26 footprint position: (257175000, 57150000)
+[board_modifier.py:85]: Setting HE27 footprint position: (276225000, 57150000)
+[board_modifier.py:85]: Setting HE28 footprint position: (300037500, 57150000)
+[board_modifier.py:85]: Setting HE29 footprint position: (323850000, 57150000)
+[board_modifier.py:85]: Setting HE30 footprint position: (45243750, 76200000)
+[board_modifier.py:85]: Setting HE31 footprint position: (71437500, 76200000)
+[board_modifier.py:85]: Setting HE32 footprint position: (90487500, 76200000)
+[board_modifier.py:85]: Setting HE33 footprint position: (109537500, 76200000)
+[board_modifier.py:85]: Setting HE34 footprint position: (128587500, 76200000)
+[board_modifier.py:85]: Setting HE35 footprint position: (147637500, 76200000)
+[board_modifier.py:85]: Setting HE36 footprint position: (166687500, 76200000)
+[board_modifier.py:85]: Setting HE37 footprint position: (185737500, 76200000)
+[board_modifier.py:85]: Setting HE38 footprint position: (204787500, 76200000)
+[board_modifier.py:85]: Setting HE39 footprint position: (223837500, 76200000)
+[board_modifier.py:85]: Setting HE40 footprint position: (242887500, 76200000)
+[board_modifier.py:85]: Setting HE41 footprint position: (261937500, 76200000)
+[board_modifier.py:85]: Setting HE42 footprint position: (292893750, 76200000)
+[board_modifier.py:85]: Setting HE43 footprint position: (323850000, 76200000)
+[board_modifier.py:85]: Setting HE44 footprint position: (50006250, 95250000)
+[board_modifier.py:85]: Setting HE45 footprint position: (80962500, 95250000)
+[board_modifier.py:85]: Setting HE46 footprint position: (100012500, 95250000)
+[board_modifier.py:85]: Setting HE47 footprint position: (119062500, 95250000)
+[board_modifier.py:85]: Setting HE48 footprint position: (138112500, 95250000)
+[board_modifier.py:85]: Setting HE49 footprint position: (157162500, 95250000)
+[board_modifier.py:85]: Setting HE50 footprint position: (176212500, 95250000)
+[board_modifier.py:85]: Setting HE51 footprint position: (195262500, 95250000)
+[board_modifier.py:85]: Setting HE52 footprint position: (214312500, 95250000)
+[board_modifier.py:85]: Setting HE53 footprint position: (233362500, 95250000)
+[board_modifier.py:85]: Setting HE54 footprint position: (252412500, 95250000)
+[board_modifier.py:85]: Setting HE55 footprint position: (278606250, 95250000)
+[board_modifier.py:85]: Setting HE56 footprint position: (304800000, 95250000)
+[board_modifier.py:85]: Setting HE57 footprint position: (323850000, 95250000)
+[board_modifier.py:85]: Setting HE58 footprint position: (40481250, 114300000)
+[board_modifier.py:85]: Setting HE59 footprint position: (64293750, 114300000)
+[board_modifier.py:85]: Setting HE60 footprint position: (88106250, 114300000)
+[board_modifier.py:85]: Setting HE61 footprint position: (121443750, 114300000)
+[board_modifier.py:85]: Setting HE62 footprint position: (154781250, 114300000)
+[board_modifier.py:85]: Setting HE63 footprint position: (192881250, 114300000)
+[board_modifier.py:85]: Setting HE64 footprint position: (230981250, 114300000)
+[board_modifier.py:85]: Setting HE65 footprint position: (254793750, 114300000)
+[board_modifier.py:85]: Setting HE66 footprint position: (285750000, 114300000)
+[board_modifier.py:85]: Setting HE67 footprint position: (304800000, 114300000)
+[board_modifier.py:85]: Setting HE68 footprint position: (323850000, 114300000)
+[key_placer.py:999]: Diode info: [ElementInfo(annotation_format='D{}', position_option=<PositionOption.UNCHANGED: 'Unchanged'>, position=ElementPosition(x=5.08, y=3.03, orientation=90.0, side=<Side.BACK: 'Back'>), template_path='')]
+[key_placer.py:775]: Placing additional elements for HE2
+[board_modifier.py:98]: Getting HE2 footprint position: (57150000, 38100000)
+[board_modifier.py:75]: Searching for optional LED2 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED2 footprint position: (57150000, 33020000)
+[board_modifier.py:75]: Searching for optional LC2 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC2 footprint position: (62150000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE8
+[board_modifier.py:98]: Getting HE8 footprint position: (171450000, 38100000)
+[board_modifier.py:75]: Searching for optional LED8 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED8 footprint position: (171450000, 33020000)
+[board_modifier.py:75]: Searching for optional LC8 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC8 footprint position: (176450000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE18
+[board_modifier.py:98]: Getting HE18 footprint position: (104775000, 57150000)
+[board_modifier.py:75]: Searching for optional LED18 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED18 footprint position: (104775000, 52070000)
+[board_modifier.py:75]: Searching for optional LC18 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC18 footprint position: (109775000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE39
+[board_modifier.py:98]: Getting HE39 footprint position: (223837500, 76200000)
+[board_modifier.py:75]: Searching for optional LED39 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED39 footprint position: (223837500, 71120000)
+[board_modifier.py:75]: Searching for optional LC39 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC39 footprint position: (228837500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE57
+[board_modifier.py:98]: Getting HE57 footprint position: (323850000, 95250000)
+[board_modifier.py:75]: Searching for optional LED57 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED57 footprint position: (323850000, 90170000)
+[board_modifier.py:75]: Searching for optional LC57 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC57 footprint position: (328850000, 90920000)
+[key_placer.py:775]: Placing additional elements for HE14
+[board_modifier.py:98]: Getting HE14 footprint position: (295275000, 38100000)
+[board_modifier.py:75]: Searching for optional LED14 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED14 footprint position: (295275000, 33020000)
+[board_modifier.py:75]: Searching for optional LC14 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC14 footprint position: (300275000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE52
+[board_modifier.py:98]: Getting HE52 footprint position: (214312500, 95250000)
+[board_modifier.py:75]: Searching for optional LED52 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED52 footprint position: (214312500, 90170000)
+[board_modifier.py:75]: Searching for optional LC52 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC52 footprint position: (219312500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE3
+[board_modifier.py:98]: Getting HE3 footprint position: (76200000, 38100000)
+[board_modifier.py:75]: Searching for optional LED3 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED3 footprint position: (76200000, 33020000)
+[board_modifier.py:75]: Searching for optional LC3 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC3 footprint position: (81200000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE38
+[board_modifier.py:98]: Getting HE38 footprint position: (204787500, 76200000)
+[board_modifier.py:75]: Searching for optional LED38 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED38 footprint position: (204787500, 71120000)
+[board_modifier.py:75]: Searching for optional LC38 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC38 footprint position: (209787500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE65
+[board_modifier.py:98]: Getting HE65 footprint position: (254793750, 114300000)
+[board_modifier.py:75]: Searching for optional LED65 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED65 footprint position: (254793750, 109220000)
+[board_modifier.py:75]: Searching for optional LC65 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC65 footprint position: (259793750, 109970000)
+[key_placer.py:775]: Placing additional elements for HE66
+[board_modifier.py:98]: Getting HE66 footprint position: (285750000, 114300000)
+[board_modifier.py:75]: Searching for optional LED66 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED66 footprint position: (285750000, 109220000)
+[board_modifier.py:75]: Searching for optional LC66 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC66 footprint position: (290750000, 109970000)
+[key_placer.py:775]: Placing additional elements for HE24
+[board_modifier.py:98]: Getting HE24 footprint position: (219075000, 57150000)
+[board_modifier.py:75]: Searching for optional LED24 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED24 footprint position: (219075000, 52070000)
+[board_modifier.py:75]: Searching for optional LC24 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC24 footprint position: (224075000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE64
+[board_modifier.py:98]: Getting HE64 footprint position: (230981250, 114300000)
+[board_modifier.py:75]: Searching for optional LED64 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED64 footprint position: (230981250, 109220000)
+[board_modifier.py:75]: Searching for optional LC64 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC64 footprint position: (235981250, 109970000)
+[key_placer.py:775]: Placing additional elements for HE4
+[board_modifier.py:98]: Getting HE4 footprint position: (95250000, 38100000)
+[board_modifier.py:75]: Searching for optional LED4 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED4 footprint position: (95250000, 33020000)
+[board_modifier.py:75]: Searching for optional LC4 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC4 footprint position: (100250000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE31
+[board_modifier.py:98]: Getting HE31 footprint position: (71437500, 76200000)
+[board_modifier.py:75]: Searching for optional LED31 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED31 footprint position: (71437500, 71120000)
+[board_modifier.py:75]: Searching for optional LC31 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC31 footprint position: (76437500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE49
+[board_modifier.py:98]: Getting HE49 footprint position: (157162500, 95250000)
+[board_modifier.py:75]: Searching for optional LED49 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED49 footprint position: (157162500, 90170000)
+[board_modifier.py:75]: Searching for optional LC49 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC49 footprint position: (162162500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE53
+[board_modifier.py:98]: Getting HE53 footprint position: (233362500, 95250000)
+[board_modifier.py:75]: Searching for optional LED53 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED53 footprint position: (233362500, 90170000)
+[board_modifier.py:75]: Searching for optional LC53 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC53 footprint position: (238362500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE15
+[board_modifier.py:98]: Getting HE15 footprint position: (42862500, 57150000)
+[board_modifier.py:75]: Searching for optional LED15 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED15 footprint position: (42862500, 52070000)
+[board_modifier.py:75]: Searching for optional LC15 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC15 footprint position: (47862500, 52820000)
+[key_placer.py:775]: Placing additional elements for HE32
+[board_modifier.py:98]: Getting HE32 footprint position: (90487500, 76200000)
+[board_modifier.py:75]: Searching for optional LED32 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED32 footprint position: (90487500, 71120000)
+[board_modifier.py:75]: Searching for optional LC32 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC32 footprint position: (95487500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE61
+[board_modifier.py:98]: Getting HE61 footprint position: (121443750, 114300000)
+[board_modifier.py:75]: Searching for optional LED61 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED61 footprint position: (121443750, 109220000)
+[board_modifier.py:75]: Searching for optional LC61 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC61 footprint position: (126443750, 109970000)
+[key_placer.py:775]: Placing additional elements for HE33
+[board_modifier.py:98]: Getting HE33 footprint position: (109537500, 76200000)
+[board_modifier.py:75]: Searching for optional LED33 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED33 footprint position: (109537500, 71120000)
+[board_modifier.py:75]: Searching for optional LC33 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC33 footprint position: (114537500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE47
+[board_modifier.py:98]: Getting HE47 footprint position: (119062500, 95250000)
+[board_modifier.py:75]: Searching for optional LED47 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED47 footprint position: (119062500, 90170000)
+[board_modifier.py:75]: Searching for optional LC47 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC47 footprint position: (124062500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE17
+[board_modifier.py:98]: Getting HE17 footprint position: (85725000, 57150000)
+[board_modifier.py:75]: Searching for optional LED17 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED17 footprint position: (85725000, 52070000)
+[board_modifier.py:75]: Searching for optional LC17 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC17 footprint position: (90725000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE22
+[board_modifier.py:98]: Getting HE22 footprint position: (180975000, 57150000)
+[board_modifier.py:75]: Searching for optional LED22 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED22 footprint position: (180975000, 52070000)
+[board_modifier.py:75]: Searching for optional LC22 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC22 footprint position: (185975000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE16
+[board_modifier.py:98]: Getting HE16 footprint position: (66675000, 57150000)
+[board_modifier.py:75]: Searching for optional LED16 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED16 footprint position: (66675000, 52070000)
+[board_modifier.py:75]: Searching for optional LC16 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC16 footprint position: (71675000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE50
+[board_modifier.py:98]: Getting HE50 footprint position: (176212500, 95250000)
+[board_modifier.py:75]: Searching for optional LED50 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED50 footprint position: (176212500, 90170000)
+[board_modifier.py:75]: Searching for optional LC50 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC50 footprint position: (181212500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE9
+[board_modifier.py:98]: Getting HE9 footprint position: (190500000, 38100000)
+[board_modifier.py:75]: Searching for optional LED9 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED9 footprint position: (190500000, 33020000)
+[board_modifier.py:75]: Searching for optional LC9 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC9 footprint position: (195500000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE45
+[board_modifier.py:98]: Getting HE45 footprint position: (80962500, 95250000)
+[board_modifier.py:75]: Searching for optional LED45 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED45 footprint position: (80962500, 90170000)
+[board_modifier.py:75]: Searching for optional LC45 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC45 footprint position: (85962500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE51
+[board_modifier.py:98]: Getting HE51 footprint position: (195262500, 95250000)
+[board_modifier.py:75]: Searching for optional LED51 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED51 footprint position: (195262500, 90170000)
+[board_modifier.py:75]: Searching for optional LC51 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC51 footprint position: (200262500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE12
+[board_modifier.py:98]: Getting HE12 footprint position: (247650000, 38100000)
+[board_modifier.py:75]: Searching for optional LED12 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED12 footprint position: (247650000, 33020000)
+[board_modifier.py:75]: Searching for optional LC12 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC12 footprint position: (252650000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE25
+[board_modifier.py:98]: Getting HE25 footprint position: (238125000, 57150000)
+[board_modifier.py:75]: Searching for optional LED25 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED25 footprint position: (238125000, 52070000)
+[board_modifier.py:75]: Searching for optional LC25 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC25 footprint position: (243125000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE19
+[board_modifier.py:98]: Getting HE19 footprint position: (123825000, 57150000)
+[board_modifier.py:75]: Searching for optional LED19 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED19 footprint position: (123825000, 52070000)
+[board_modifier.py:75]: Searching for optional LC19 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC19 footprint position: (128825000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE60
+[board_modifier.py:98]: Getting HE60 footprint position: (88106250, 114300000)
+[board_modifier.py:75]: Searching for optional LED60 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED60 footprint position: (88106250, 109220000)
+[board_modifier.py:75]: Searching for optional LC60 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC60 footprint position: (93106250, 109970000)
+[key_placer.py:775]: Placing additional elements for HE7
+[board_modifier.py:98]: Getting HE7 footprint position: (152400000, 38100000)
+[board_modifier.py:75]: Searching for optional LED7 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED7 footprint position: (152400000, 33020000)
+[board_modifier.py:75]: Searching for optional LC7 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC7 footprint position: (157400000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE11
+[board_modifier.py:98]: Getting HE11 footprint position: (228600000, 38100000)
+[board_modifier.py:75]: Searching for optional LED11 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED11 footprint position: (228600000, 33020000)
+[board_modifier.py:75]: Searching for optional LC11 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC11 footprint position: (233600000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE44
+[board_modifier.py:98]: Getting HE44 footprint position: (50006250, 95250000)
+[board_modifier.py:75]: Searching for optional LED44 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED44 footprint position: (50006250, 90170000)
+[board_modifier.py:75]: Searching for optional LC44 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC44 footprint position: (55006250, 90920000)
+[key_placer.py:775]: Placing additional elements for HE27
+[board_modifier.py:98]: Getting HE27 footprint position: (276225000, 57150000)
+[board_modifier.py:75]: Searching for optional LED27 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED27 footprint position: (276225000, 52070000)
+[board_modifier.py:75]: Searching for optional LC27 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC27 footprint position: (281225000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE6
+[board_modifier.py:98]: Getting HE6 footprint position: (133350000, 38100000)
+[board_modifier.py:75]: Searching for optional LED6 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED6 footprint position: (133350000, 33020000)
+[board_modifier.py:75]: Searching for optional LC6 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC6 footprint position: (138350000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE63
+[board_modifier.py:98]: Getting HE63 footprint position: (192881250, 114300000)
+[board_modifier.py:75]: Searching for optional LED63 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED63 footprint position: (192881250, 109220000)
+[board_modifier.py:75]: Searching for optional LC63 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC63 footprint position: (197881250, 109970000)
+[key_placer.py:775]: Placing additional elements for HE30
+[board_modifier.py:98]: Getting HE30 footprint position: (45243750, 76200000)
+[board_modifier.py:75]: Searching for optional LED30 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED30 footprint position: (45243750, 71120000)
+[board_modifier.py:75]: Searching for optional LC30 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC30 footprint position: (50243750, 71870000)
+[key_placer.py:775]: Placing additional elements for HE59
+[board_modifier.py:98]: Getting HE59 footprint position: (64293750, 114300000)
+[board_modifier.py:75]: Searching for optional LED59 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED59 footprint position: (64293750, 109220000)
+[board_modifier.py:75]: Searching for optional LC59 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC59 footprint position: (69293750, 109970000)
+[key_placer.py:775]: Placing additional elements for HE1
+[board_modifier.py:98]: Getting HE1 footprint position: (38100000, 38100000)
+[board_modifier.py:75]: Searching for optional LED1 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED1 footprint position: (38100000, 33020000)
+[board_modifier.py:75]: Searching for optional LC1 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC1 footprint position: (43100000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE46
+[board_modifier.py:98]: Getting HE46 footprint position: (100012500, 95250000)
+[board_modifier.py:75]: Searching for optional LED46 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED46 footprint position: (100012500, 90170000)
+[board_modifier.py:75]: Searching for optional LC46 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC46 footprint position: (105012500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE58
+[board_modifier.py:98]: Getting HE58 footprint position: (40481250, 114300000)
+[board_modifier.py:75]: Searching for optional LED58 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED58 footprint position: (40481250, 109220000)
+[board_modifier.py:75]: Searching for optional LC58 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC58 footprint position: (45481250, 109970000)
+[key_placer.py:775]: Placing additional elements for HE35
+[board_modifier.py:98]: Getting HE35 footprint position: (147637500, 76200000)
+[board_modifier.py:75]: Searching for optional LED35 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED35 footprint position: (147637500, 71120000)
+[board_modifier.py:75]: Searching for optional LC35 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC35 footprint position: (152637500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE43
+[board_modifier.py:98]: Getting HE43 footprint position: (323850000, 76200000)
+[board_modifier.py:75]: Searching for optional LED43 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED43 footprint position: (323850000, 71120000)
+[board_modifier.py:75]: Searching for optional LC43 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC43 footprint position: (328850000, 71870000)
+[key_placer.py:775]: Placing additional elements for HE23
+[board_modifier.py:98]: Getting HE23 footprint position: (200025000, 57150000)
+[board_modifier.py:75]: Searching for optional LED23 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED23 footprint position: (200025000, 52070000)
+[board_modifier.py:75]: Searching for optional LC23 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC23 footprint position: (205025000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE55
+[board_modifier.py:98]: Getting HE55 footprint position: (278606250, 95250000)
+[board_modifier.py:75]: Searching for optional LED55 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED55 footprint position: (278606250, 90170000)
+[board_modifier.py:75]: Searching for optional LC55 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC55 footprint position: (283606250, 90920000)
+[key_placer.py:775]: Placing additional elements for HE67
+[board_modifier.py:98]: Getting HE67 footprint position: (304800000, 114300000)
+[board_modifier.py:75]: Searching for optional LED67 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED67 footprint position: (304800000, 109220000)
+[board_modifier.py:75]: Searching for optional LC67 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC67 footprint position: (309800000, 109970000)
+[key_placer.py:775]: Placing additional elements for HE37
+[board_modifier.py:98]: Getting HE37 footprint position: (185737500, 76200000)
+[board_modifier.py:75]: Searching for optional LED37 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED37 footprint position: (185737500, 71120000)
+[board_modifier.py:75]: Searching for optional LC37 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC37 footprint position: (190737500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE26
+[board_modifier.py:98]: Getting HE26 footprint position: (257175000, 57150000)
+[board_modifier.py:75]: Searching for optional LED26 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED26 footprint position: (257175000, 52070000)
+[board_modifier.py:75]: Searching for optional LC26 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC26 footprint position: (262175000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE40
+[board_modifier.py:98]: Getting HE40 footprint position: (242887500, 76200000)
+[board_modifier.py:75]: Searching for optional LED40 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED40 footprint position: (242887500, 71120000)
+[board_modifier.py:75]: Searching for optional LC40 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC40 footprint position: (247887500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE54
+[board_modifier.py:98]: Getting HE54 footprint position: (252412500, 95250000)
+[board_modifier.py:75]: Searching for optional LED54 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED54 footprint position: (252412500, 90170000)
+[board_modifier.py:75]: Searching for optional LC54 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC54 footprint position: (257412500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE21
+[board_modifier.py:98]: Getting HE21 footprint position: (161925000, 57150000)
+[board_modifier.py:75]: Searching for optional LED21 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED21 footprint position: (161925000, 52070000)
+[board_modifier.py:75]: Searching for optional LC21 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC21 footprint position: (166925000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE48
+[board_modifier.py:98]: Getting HE48 footprint position: (138112500, 95250000)
+[board_modifier.py:75]: Searching for optional LED48 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED48 footprint position: (138112500, 90170000)
+[board_modifier.py:75]: Searching for optional LC48 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC48 footprint position: (143112500, 90920000)
+[key_placer.py:775]: Placing additional elements for HE41
+[board_modifier.py:98]: Getting HE41 footprint position: (261937500, 76200000)
+[board_modifier.py:75]: Searching for optional LED41 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED41 footprint position: (261937500, 71120000)
+[board_modifier.py:75]: Searching for optional LC41 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC41 footprint position: (266937500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE10
+[board_modifier.py:98]: Getting HE10 footprint position: (209550000, 38100000)
+[board_modifier.py:75]: Searching for optional LED10 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED10 footprint position: (209550000, 33020000)
+[board_modifier.py:75]: Searching for optional LC10 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC10 footprint position: (214550000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE20
+[board_modifier.py:98]: Getting HE20 footprint position: (142875000, 57150000)
+[board_modifier.py:75]: Searching for optional LED20 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED20 footprint position: (142875000, 52070000)
+[board_modifier.py:75]: Searching for optional LC20 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC20 footprint position: (147875000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE29
+[board_modifier.py:98]: Getting HE29 footprint position: (323850000, 57150000)
+[board_modifier.py:75]: Searching for optional LED29 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED29 footprint position: (323850000, 52070000)
+[board_modifier.py:75]: Searching for optional LC29 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC29 footprint position: (328850000, 52820000)
+[key_placer.py:775]: Placing additional elements for HE42
+[board_modifier.py:98]: Getting HE42 footprint position: (292893750, 76200000)
+[board_modifier.py:75]: Searching for optional LED42 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED42 footprint position: (292893750, 71120000)
+[board_modifier.py:75]: Searching for optional LC42 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC42 footprint position: (297893750, 71870000)
+[key_placer.py:775]: Placing additional elements for HE56
+[board_modifier.py:98]: Getting HE56 footprint position: (304800000, 95250000)
+[board_modifier.py:75]: Searching for optional LED56 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED56 footprint position: (304800000, 90170000)
+[board_modifier.py:75]: Searching for optional LC56 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC56 footprint position: (309800000, 90920000)
+[key_placer.py:775]: Placing additional elements for HE62
+[board_modifier.py:98]: Getting HE62 footprint position: (154781250, 114300000)
+[board_modifier.py:75]: Searching for optional LED62 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED62 footprint position: (154781250, 109220000)
+[board_modifier.py:75]: Searching for optional LC62 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC62 footprint position: (159781250, 109970000)
+[key_placer.py:775]: Placing additional elements for HE5
+[board_modifier.py:98]: Getting HE5 footprint position: (114300000, 38100000)
+[board_modifier.py:75]: Searching for optional LED5 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED5 footprint position: (114300000, 33020000)
+[board_modifier.py:75]: Searching for optional LC5 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC5 footprint position: (119300000, 33770000)
+[key_placer.py:775]: Placing additional elements for HE34
+[board_modifier.py:98]: Getting HE34 footprint position: (128587500, 76200000)
+[board_modifier.py:75]: Searching for optional LED34 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED34 footprint position: (128587500, 71120000)
+[board_modifier.py:75]: Searching for optional LC34 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC34 footprint position: (133587500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE68
+[board_modifier.py:98]: Getting HE68 footprint position: (323850000, 114300000)
+[board_modifier.py:75]: Searching for optional LED68 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED68 footprint position: (323850000, 109220000)
+[board_modifier.py:75]: Searching for optional LC68 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC68 footprint position: (328850000, 109970000)
+[key_placer.py:775]: Placing additional elements for HE28
+[board_modifier.py:98]: Getting HE28 footprint position: (300037500, 57150000)
+[board_modifier.py:75]: Searching for optional LED28 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED28 footprint position: (300037500, 52070000)
+[board_modifier.py:75]: Searching for optional LC28 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC28 footprint position: (305037500, 52820000)
+[key_placer.py:775]: Placing additional elements for HE36
+[board_modifier.py:98]: Getting HE36 footprint position: (166687500, 76200000)
+[board_modifier.py:75]: Searching for optional LED36 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED36 footprint position: (166687500, 71120000)
+[board_modifier.py:75]: Searching for optional LC36 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC36 footprint position: (171687500, 71870000)
+[key_placer.py:775]: Placing additional elements for HE13
+[board_modifier.py:98]: Getting HE13 footprint position: (266700000, 38100000)
+[board_modifier.py:75]: Searching for optional LED13 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LED13 footprint position: (266700000, 33020000)
+[board_modifier.py:75]: Searching for optional LC13 footprint in X:\SM65\pcbs\SM65.kicad_pcb
+[board_modifier.py:85]: Setting LC13 footprint position: (271700000, 33770000)
